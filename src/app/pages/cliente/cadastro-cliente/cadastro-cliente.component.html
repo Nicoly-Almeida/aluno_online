@@ -1,6 +1,6 @@
 <div class="container mt-5 d-flex justify-content-center" >
     <div>
-        <h1 *ngIf="!editar">{{ editar ? 'Editar cliente' :'Novo cliente'}} </h1>
+        <h1>{{ editar ? 'Editar cliente' :'Novo cliente'}} </h1>
 
         <form [formGroup]="formGroup" class="example-form mt-4" (ngSubmit)="cadastrar()">
 

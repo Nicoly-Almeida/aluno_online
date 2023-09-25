@@ -9,11 +9,10 @@ import { ListagemClienteComponent } from './listagem-cliente/listagem-cliente.co
 import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.component';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
-
 @NgModule({
   declarations: [
     ListagemClienteComponent,
-    CadastroClienteComponent
+    CadastroClienteComponent,
   ],
   imports: [
     CommonModule,
@@ -24,13 +23,15 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
     HttpClientModule,
     MaterialModule,
     NgxMaskDirective, 
-    NgxMaskPipe
+    NgxMaskPipe,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [provideNgxMask()],
   exports: [
     ListagemClienteComponent,
-    CadastroClienteComponent
-  ]
+    CadastroClienteComponent,
+    NgxMaskDirective, 
+    NgxMaskPipe, 
+  ],
 })
 export class ClienteModule { }
