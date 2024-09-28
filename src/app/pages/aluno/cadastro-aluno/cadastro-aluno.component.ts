@@ -20,6 +20,9 @@ export class CadastroAlunoComponent {
       cpf: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
       anoNascimento: new FormControl('', Validators.required),
+      endereco: new FormGroup({
+        cep: new FormControl('', Validators.required),
+      }),
     });
   } 
 
@@ -35,12 +38,11 @@ export class CadastroAlunoComponent {
           timer: 1500
         })
       },
-      error: (error) => {
-        console.error(error)
+      error: (erroBackend) => {
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
-          text: 'Erro ao cadastrar aluno!',
+          text: erroBackend.error.detalhes,
         })
       }
     })
