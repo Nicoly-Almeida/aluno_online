@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'sistema_bancario'`, () => {
+  it(`should have as title 'aluno_online'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('sistema_bancario');
+    expect(app.title).toEqual('aluno_online');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('sistema_bancario app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('aluno_online app is running!');
   });
 });

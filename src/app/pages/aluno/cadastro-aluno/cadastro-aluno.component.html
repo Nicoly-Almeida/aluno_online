@@ -1,0 +1,40 @@
+<div class="container mt-5 d-flex justify-content-center">
+    <h1>Novo aluno</h1>
+    <form [formGroup]="formGroup" class="example-form mt-4" (ngSubmit)="cadastrar()">
+        <!--Input de nome do aluno-->
+        <mat-form-field class="example-full-width">
+            <mat-label>Nome</mat-label>
+            <input matInput formControlName="name">
+        </mat-form-field>
+
+        <!--Input de cpf do aluno-->
+        <mat-form-field class="example-full-width">
+            <mat-label>CPF</mat-label>
+            <input matInput formControlName="cpf" mask="000.000.000-00">
+        </mat-form-field>
+        <!--Input de email do aluno-->
+        <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+        </mat-form-field>
+
+        <!--Input de email do aluno-->
+        <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+        </mat-form-field>
+
+        <!--Input de ano de nascimento do aluno-->
+        <mat-form-field class="example-full-width">
+            <mat-label>Ano de nascimento</mat-label>
+            <input matInput formControlName="anoNascimento">
+        </mat-form-field>
+        
+        <!--Botao de submissao do formulario-->
+        <div class="d-flex justify-content-center">
+            <button [disabled]="!formGroup.valid" type="submit" mat-raised-button color="primary">
+                Cadastrar
+            </button>
+        </div>
+    </form>
+</div>
